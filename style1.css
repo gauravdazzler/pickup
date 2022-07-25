@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Edu QLD Beginner', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header-section{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url('mountainWhite.jpg') ; 
+    background-size: cover;
+    display: flex;
+    justify-content: center;  
+    align-items:center ;  /* to align items vertically*/
+    text-align: center;
+}
+
+.logo{
+    font-size: 80px;
+    font-weight: 400;
+    color: white;
+    text-transform: capitalize;
+    transition: all 0.9s ease-in-out;
+}
+
+.logo:hover{
+    transform: scale(1.2);
+}
+
+.sub-line{
+    color: #fff;
+    padding: 20px 0 30px;
+    font-size: 20px; 
+    text-transform: capitalize;
+    word-spacing: 2px;
+    position: relative;
+    font-weight: 300;
+    transition: all 0.7s ease-in-out;
+    
+}
+
+.sub-line:hover{
+    transform: scale(1.2);
+}
+
+.sub-line::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: #fff;
+
+}
+
+.sub-line::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.search-box{
+    display: block;
+    margin: 60px auto 20px;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+}
+
+.search-btn{
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #0a1113;
+    color: #fff;
+}
+
+.gallery{
+    width: 100%;
+    padding: 40px;
+    background-color: #fff;
+    columns: 5;
+    /* display: grid;
+    grid-template-columns: auto auto auto auto; */
+    column-gap: 20px;
+}
+
+.gallery img{
+    width: 100%;
+    /* height: 100%;    */
+    /* width: 40%;
+    height: 40%; */
+    /* width: 280px;
+    height: 300px; */
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background:#f9f9f9 ;   /* because if the image is taking too much time for loading then it will show the background */
+
+}
+
+.image-popup{
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80vh;
+    background: #fff;
+    /* background-origin: rgb(200, 38, 38); */
+    box-shadow: 0px 5px 50px rgba(0,0,0,0.25);
+    border-radius: 10px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none;  
+    opacity: 0; */
+
+}
+
+.hide{
+    display: none;
+    opacity: 0;
+    
+}
+
+.close-btn{
+    position: absolute;
+    top:10px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background: #383a3a;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.download-btn{
+    text-transform: capitalize;
+    padding: 10px 20px;
+    background: #192f2e;
+    color: #fff;
+    
+    text-decoration: none;
+    border-radius: 5px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.large-img{
+    height: 80%;
+    width: auto;
+    max-width: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.controls{
+    background: none;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+}
+
+.pre-btn{
+    left: 20px;
+}
+
+.nxt-btn{
+    right: 20px;
+}
+
